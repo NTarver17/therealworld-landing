@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | The Real World Portal</title>
+    <meta name="description" content="Have questions about The Real World or our educational guides? Get in touch with our support and editorial team. We respond within 24 hours.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVIGATION HEADER -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="The Real World Logo" class="brand-logo-img">
+                <span class="logo-text">THE REAL WORLD <span class="badge-v2">2.0</span></span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="guides.html" class="nav-link nav-link-highlight">
+                    <span>Guides</span>
+                    <span class="nav-badge-pill">Library</span>
+                </a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://jointherealworld.com/a/qmHjdpp6" target="_blank" rel="noopener" class="btn-primary-nav cta-affiliate-link">Join The Real World</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <a href="index.html">&larr; Back to Home</a>
+            <span>/</span>
+            <span>Contact Us</span>
+        </nav>
+
+        <div class="page-header-box">
+            <span class="page-badge">Support & Inquiries</span>
+            <h1 class="page-main-title">Get in Touch With Us</h1>
+            <p class="page-last-updated">We're here to help answer your questions about the portal, campuses, and enrollment</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Contact Info Cards -->
+            <div class="contact-info-panel">
+                <div class="contact-card-item">
+                    <h3 class="contact-card-title">💬 General Inquiries</h3>
+                    <p class="contact-card-text">
+                        Have a question about how The Real World works, which campus is right for you, or our calculator roadmaps? Send us a message and our team will get back to you promptly.
+                    </p>
+                </div>
+
+                <div class="contact-card-item">
+                    <h3 class="contact-card-title">📧 Direct Email Support</h3>
+                    <p class="contact-card-text">
+                        <strong>Support:</strong> support@therealworldportal.com<br>
+                        <strong>Editorial:</strong> editorial@therealworldportal.com<br>
+                        <strong>Privacy / Legal:</strong> legal@therealworldportal.com
+                    </p>
+                </div>
+
+                <div class="contact-card-item">
+                    <h3 class="contact-card-title">⏱️ Response Expectations</h3>
+                    <p class="contact-card-text">
+                        Our team monitors incoming messages 7 days a week. We typically reply within <strong>12 to 24 hours</strong> during business days.
+                    </p>
+                </div>
+
+                <div class="contact-card-item">
+                    <h3 class="contact-card-title">🎓 Student Portal Support</h3>
+                    <p class="contact-card-text">
+                        If you are already an active student inside the platform, you can access direct in-app 24/7 technical support by logging into the student portal at <a href="https://app.jointherealworld.com/login" target="_blank" rel="noopener" style="color: var(--gold-light); text-decoration: underline;">app.jointherealworld.com</a>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Form Card -->
+            <div class="legal-content-card">
+                <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; margin-bottom: 20px; color: #fff;">
+                    Send Us a Message
+                </h3>
+
+                <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                    <div class="form-group">
+                        <label for="contactName" class="form-label">Your Name</label>
+                        <input type="text" id="contactName" class="form-control" placeholder="e.g. Alex Miller" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail" class="form-label">Email Address</label>
+                        <input type="email" id="contactEmail" class="form-control" placeholder="e.g. alex@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactSubject" class="form-label">Subject</label>
+                        <select id="contactSubject" class="form-control" required>
+                            <option value="">Select a topic...</option>
+                            <option value="Campus Question">Which Campus Is Right For Me?</option>
+                            <option value="Enrollment Help">Enrollment & Pricing Questions</option>
+                            <option value="Editorial Feedback">Editorial & Review Feedback</option>
+                            <option value="Partnership">Partnership / Advertising</option>
+                            <option value="Other">Other Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage" class="form-label">Your Message</label>
+                        <textarea id="contactMessage" class="form-control" placeholder="How can we assist you today?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-form-submit" id="contactSubmitBtn">
+                        Send Message &rarr;
+                    </button>
+
+                    <div class="form-success-msg" id="contactSuccess">
+                        ✓ Thank you! Your message has been received. Our team will get back to you shortly.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="The Real World Logo" class="brand-logo-img">
+                        <span>THE REAL WORLD</span>
+                    </div>
+                    <p class="footer-tagline">
+                        Independent educational resource portal and review hub for modern wealth creation.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p>
+                    <strong>Disclaimer:</strong> This website is an independent educational and affiliate review portal. We are not financial advisors. All content is for informational and educational purposes only.
+                </p>
+                <p>
+                    © 2026 The Real World Educational Portal. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const btn = document.getElementById('contactSubmitBtn');
+            const successMsg = document.getElementById('contactSuccess');
+            
+            btn.innerHTML = 'Sending...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                document.getElementById('contactForm').reset();
+                btn.style.display = 'none';
+                successMsg.style.display = 'block';
+            }, 600);
+        }
+    </script>
+</body>
+</html>

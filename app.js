@@ -369,4 +369,44 @@ document.addEventListener('DOMContentLoaded', () => {
         showProofToast();
         setInterval(showProofToast, 12000);
     }, 4000);
+
+    // 10. HERO VIDEO CONTROLLER
+    const heroVideo = document.getElementById('heroVideo');
+    const heroVideoOverlay = document.getElementById('heroVideoOverlay');
+    const heroPlayBtn = document.getElementById('heroPlayBtn');
+
+    if (heroVideo && heroVideoOverlay) {
+        const handlePlayVideo = () => {
+            heroVideo.play().then(() => {
+                heroVideoOverlay.classList.add('is-hidden');
+            }).catch(err => {
+                console.log('Autoplay / play interaction error:', err);
+                // Fallback: unhide controls
+                heroVideo.controls = true;
+                heroVideoOverlay.classList.add('is-hidden');
+            });
+        };
+
+        heroVideoOverlay.addEventListener('click', handlePlayVideo);
+        if (heroPlayBtn) {
+            heroPlayBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                handlePlayVideo();
+            });
+        }
+
+        heroVideo.addEventListener('play', () => {
+            heroVideoOverlay.classList.add('is-hidden');
+        });
+
+        heroVideo.addEventListener('pause', () => {
+            if (!heroVideo.seeking) {
+                heroVideoOverlay.classList.remove('is-hidden');
+            }
+        });
+
+        heroVideo.addEventListener('ended', () => {
+            heroVideoOverlay.classList.remove('is-hidden');
+        });
+    }
 });

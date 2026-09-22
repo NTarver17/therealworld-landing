@@ -57,16 +57,20 @@
 
             <nav class="nav-links">
                 <a href="#campuses" class="nav-link">Campuses</a>
-                <a href="#calculator" class="nav-link">Income Calculator</a>
+                <a href="#calculator" class="nav-link">Calculator</a>
                 <a href="#sneak-peek" class="nav-link">Inside Portal</a>
-                <a href="#reviews" class="nav-link">Proof & Reviews</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
                 <a href="#faq" class="nav-link">FAQ</a>
+                <a href="guides.html" class="nav-link nav-link-highlight">
+                    <span>Guides</span>
+                    <span class="nav-badge-pill">New</span>
+                </a>
             </nav>
 
             <div class="nav-actions">
-                <a href="https://app.jointherealworld.com/login" target="_blank" class="btn-login">Log In</a>
-                <a href="https://jointherealworld.com/a/qmHjdpp6" target="_blank" class="btn-primary-nav cta-affiliate-link">Join The Real World</a>
+                <a href="https://app.jointherealworld.com/login" target="_blank" rel="noopener" class="btn-login">Log In</a>
+                <a href="https://jointherealworld.com/a/qmHjdpp6" target="_blank" rel="noopener" class="btn-primary-nav cta-affiliate-link">Join The Real World</a>
             </div>
 
             <!-- Mobile Menu Toggle -->
@@ -79,15 +83,19 @@
 
         <!-- Mobile Dropdown Navigation -->
         <div class="mobile-nav" id="mobileNav">
+            <a href="guides.html" class="mobile-nav-link" style="color: var(--gold-light); font-weight: 700;">
+                <span>📚 Guides & Articles</span>
+                <span class="nav-badge-pill">New</span>
+            </a>
             <a href="#campuses" class="mobile-nav-link">Campuses</a>
             <a href="#calculator" class="mobile-nav-link">Income Calculator</a>
             <a href="#sneak-peek" class="mobile-nav-link">Inside Portal</a>
-            <a href="#reviews" class="mobile-nav-link">Proof & Reviews</a>
+            <a href="#reviews" class="mobile-nav-link">Reviews & Proof</a>
             <a href="#pricing" class="mobile-nav-link">Pricing</a>
             <a href="#faq" class="mobile-nav-link">FAQ</a>
             <div class="mobile-actions">
-                <a href="https://app.jointherealworld.com/login" target="_blank" class="btn-login-mobile">Log In</a>
-                <a href="https://jointherealworld.com/a/qmHjdpp6" target="_blank" class="btn-primary cta-affiliate-link">Join The Real World</a>
+                <a href="https://app.jointherealworld.com/login" target="_blank" rel="noopener" class="btn-login-mobile">Log In</a>
+                <a href="https://jointherealworld.com/a/qmHjdpp6" target="_blank" rel="noopener" class="btn-primary cta-affiliate-link">Join The Real World</a>
             </div>
         </div>
     </header>
@@ -111,6 +119,28 @@
                 <p class="hero-subtitle">
                     Generate real income now with The Real World’s expert-led training in the fastest-growing online businesses. Mentored daily by multimillionaire professors who actively make millions with the exact skills they teach.
                 </p>
+
+                <!-- HERO VIDEO PRESENTATION -->
+                <div class="hero-video-wrapper" id="heroVideoWrapper">
+                    <div class="hero-video-glow glow-left"></div>
+                    <div class="hero-video-glow glow-right"></div>
+                    <div class="hero-video-container" id="heroVideoContainer">
+                        <video id="heroVideo" class="hero-video-element" playsinline preload="metadata" controls>
+                            <source src="hero-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="hero-video-overlay" id="heroVideoOverlay">
+                            <button class="hero-play-btn" id="heroPlayBtn" aria-label="Play Video">
+                                <span class="play-pulse-ring"></span>
+                                <span class="play-icon-bg">
+                                    <svg class="play-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="hero-cta-group">
                     <a href="https://jointherealworld.com/a/qmHjdpp6" target="_blank" class="btn-hero-primary cta-affiliate-link">
@@ -1044,11 +1074,13 @@
                     </p>
                 </div>
                 <div class="footer-links">
-                    <a href="https://jointherealworld.com/terms" target="_blank">Terms & Conditions</a>
-                    <a href="https://jointherealworld.com/subscription-policy" target="_blank">Subscription Policy</a>
-                    <a href="https://jointherealworld.com/privacy" target="_blank">Privacy Policy</a>
-                    <a href="https://jointherealworld.com/content-moderation-policy" target="_blank">Content Moderation</a>
-                    <a href="https://app.jointherealworld.com/login" target="_blank">Student Login</a>
+                    <a href="guides.html">Educational Guides</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="https://app.jointherealworld.com/login" target="_blank" rel="noopener">Student Login</a>
                 </div>
             </div>
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://peaceful-tiramisu-3cdb0d.netlify.app/sitemap.xml
